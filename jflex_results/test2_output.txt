@@ -1,0 +1,123 @@
+
+=== TOKENS RECOGNIZED ===
+
+<COMMENT, "## Test file 2: Complex expressions", Line: 1, Col: 1>
+<COMMENT, "## Testing real-world code patterns", Line: 2, Col: 1>
+<IDENTIFIER, "Counter_value", Line: 4, Col: 1>
+<INTEGER, "+123", Line: 4, Col: 15>
+<IDENTIFIER, "Result", Line: 5, Col: 1>
+<INTEGER, "-456", Line: 5, Col: 8>
+<IDENTIFIER, "Float_num", Line: 6, Col: 1>
+<FLOAT, "12.34e-5", Line: 6, Col: 11>
+<IDENTIFIER, "Sum", Line: 8, Col: 1>
+<OPERATOR, "+", Line: 8, Col: 5>
+<IDENTIFIER, "Difference", Line: 8, Col: 7>
+<OPERATOR, "-", Line: 8, Col: 18>
+<IDENTIFIER, "Product", Line: 8, Col: 20>
+<OPERATOR, "*", Line: 8, Col: 28>
+<IDENTIFIER, "Quotient", Line: 8, Col: 30>
+<OPERATOR, "/", Line: 8, Col: 39>
+<IDENTIFIER, "Remainder", Line: 8, Col: 41>
+<OPERATOR, "%", Line: 8, Col: 51>
+<IDENTIFIER, "Value_1", Line: 10, Col: 1>
+<RELATIONAL, "<", Line: 10, Col: 9>
+<IDENTIFIER, "Value_2", Line: 10, Col: 11>
+<IDENTIFIER, "Value_1", Line: 11, Col: 1>
+<RELATIONAL, "<=", Line: 11, Col: 9>
+<IDENTIFIER, "Value_2", Line: 11, Col: 12>
+<IDENTIFIER, "Value_3", Line: 12, Col: 1>
+<RELATIONAL, ">", Line: 12, Col: 9>
+<IDENTIFIER, "Value_4", Line: 12, Col: 11>
+<IDENTIFIER, "Value_3", Line: 13, Col: 1>
+<RELATIONAL, ">=", Line: 13, Col: 9>
+<IDENTIFIER, "Value_4", Line: 13, Col: 12>
+<IDENTIFIER, "Flag_1", Line: 14, Col: 1>
+<RELATIONAL, "==", Line: 14, Col: 8>
+<IDENTIFIER, "Flag_2", Line: 14, Col: 11>
+<IDENTIFIER, "Flag_1", Line: 15, Col: 1>
+<RELATIONAL, "!=", Line: 15, Col: 8>
+<IDENTIFIER, "Flag_2", Line: 15, Col: 11>
+<COMMENT, "##Complex expression with all operators", Line: 17, Col: 1>
+<IDENTIFIER, "Result", Line: 18, Col: 1>
+<INTEGER, "+123", Line: 18, Col: 8>
+<OPERATOR, "-", Line: 18, Col: 13>
+<INTEGER, "45", Line: 18, Col: 15>
+<OPERATOR, "*", Line: 18, Col: 18>
+<INTEGER, "67", Line: 18, Col: 20>
+<OPERATOR, "/", Line: 18, Col: 23>
+<INTEGER, "89", Line: 18, Col: 25>
+<OPERATOR, "%", Line: 18, Col: 28>
+<INTEGER, "10", Line: 18, Col: 30>
+<IDENTIFIER, "Comparison", Line: 19, Col: 1>
+<IDENTIFIER, "Value_1", Line: 19, Col: 12>
+<RELATIONAL, "<", Line: 19, Col: 20>
+<IDENTIFIER, "Value_2", Line: 19, Col: 22>
+<BOOLEAN, "true", Line: 19, Col: 30>
+<BOOLEAN, "false", Line: 19, Col: 35>
+<COMMENT, "## Nested expressions", Line: 21, Col: 1>
+<IDENTIFIER, "A", Line: 22, Col: 1>
+<OPERATOR, "+", Line: 22, Col: 3>
+<IDENTIFIER, "B", Line: 22, Col: 5>
+<OPERATOR, "*", Line: 22, Col: 7>
+<IDENTIFIER, "C", Line: 22, Col: 9>
+<OPERATOR, "-", Line: 22, Col: 11>
+<IDENTIFIER, "D", Line: 22, Col: 13>
+<OPERATOR, "/", Line: 22, Col: 15>
+<IDENTIFIER, "E", Line: 22, Col: 17>
+<IDENTIFIER, "X", Line: 23, Col: 1>
+<BOOLEAN, "true", Line: 23, Col: 3>
+<IDENTIFIER, "Y", Line: 23, Col: 8>
+<BOOLEAN, "false", Line: 23, Col: 10>
+<IDENTIFIER, "P", Line: 24, Col: 1>
+<RELATIONAL, "<=", Line: 24, Col: 3>
+<IDENTIFIER, "Q", Line: 24, Col: 6>
+<IDENTIFIER, "R", Line: 24, Col: 8>
+<RELATIONAL, ">=", Line: 24, Col: 10>
+<IDENTIFIER, "S", Line: 24, Col: 13>
+
+=== SYMBOL TABLE ===
+
+========== SYMBOL TABLE ==========
+Name                 Type            First Line   Frequency
+============================================================
+  Counter_value        IDENTIFIER      Line: 4     Freq: 1
+  Result               IDENTIFIER      Line: 5     Freq: 2
+  Float_num            IDENTIFIER      Line: 6     Freq: 1
+  Sum                  IDENTIFIER      Line: 8     Freq: 1
+  Difference           IDENTIFIER      Line: 8     Freq: 1
+  Product              IDENTIFIER      Line: 8     Freq: 1
+  Quotient             IDENTIFIER      Line: 8     Freq: 1
+  Remainder            IDENTIFIER      Line: 8     Freq: 1
+  Value_1              IDENTIFIER      Line: 10    Freq: 3
+  Value_2              IDENTIFIER      Line: 10    Freq: 3
+  Value_3              IDENTIFIER      Line: 12    Freq: 2
+  Value_4              IDENTIFIER      Line: 12    Freq: 2
+  Flag_1               IDENTIFIER      Line: 14    Freq: 2
+  Flag_2               IDENTIFIER      Line: 14    Freq: 2
+  Comparison           IDENTIFIER      Line: 19    Freq: 1
+  A                    IDENTIFIER      Line: 22    Freq: 1
+  B                    IDENTIFIER      Line: 22    Freq: 1
+  C                    IDENTIFIER      Line: 22    Freq: 1
+  D                    IDENTIFIER      Line: 22    Freq: 1
+  E                    IDENTIFIER      Line: 22    Freq: 1
+  X                    IDENTIFIER      Line: 23    Freq: 1
+  Y                    IDENTIFIER      Line: 23    Freq: 1
+  P                    IDENTIFIER      Line: 24    Freq: 1
+  Q                    IDENTIFIER      Line: 24    Freq: 1
+  R                    IDENTIFIER      Line: 24    Freq: 1
+  S                    IDENTIFIER      Line: 24    Freq: 1
+============================================================
+Total unique identifiers: 26
+
+
+=== LEXICAL ERRORS ===
+No lexical errors found.
+
+=== SCANNING STATISTICS ===
+Total Lines: 25
+Total Tokens: 151
+Unique Identifiers: 26
+Lexical Errors: 0
+
+=== JFLEX SCANNER COMPLETED ===
+

@@ -1,0 +1,92 @@
+
+=== TOKENS RECOGNIZED ===
+
+<COMMENT, "## Test file 3: Edge cases and boundary conditions", Line: 1, Col: 1>
+<COMMENT, "## Single character identifier (minimum length)", Line: 3, Col: 1>
+<IDENTIFIER, "A", Line: 4, Col: 1>
+<IDENTIFIER, "Z", Line: 5, Col: 1>
+<COMMENT, "## Maximum length identifier (31 characters)", Line: 7, Col: 1>
+<IDENTIFIER, "Variable_name_with_max_length_3", Line: 8, Col: 1>
+<INTEGER, "1", Line: 8, Col: 32>
+<COMMENT, "## Integer edge cases", Line: 10, Col: 1>
+<INTEGER, "+0", Line: 11, Col: 1>
+<INTEGER, "-0", Line: 12, Col: 1>
+<INTEGER, "0", Line: 13, Col: 1>
+<COMMENT, "## Float edge cases", Line: 15, Col: 1>
+<FLOAT, "1.0", Line: 16, Col: 1>
+<FLOAT, "1.000001", Line: 17, Col: 1>
+<FLOAT, "999999.999999", Line: 18, Col: 1>
+<FLOAT, "+1.1e+999", Line: 19, Col: 1>
+<FLOAT, "-1.1e-999", Line: 20, Col: 1>
+<COMMENT, "## Float with 6 decimal places (maximum)", Line: 22, Col: 1>
+<FLOAT, "123.123456", Line: 23, Col: 1>
+<COMMENT, "## Boolean keywords", Line: 25, Col: 1>
+<BOOLEAN, "true", Line: 26, Col: 1>
+<BOOLEAN, "false", Line: 27, Col: 1>
+<COMMENT, "## All relational operators in sequence", Line: 29, Col: 1>
+<RELATIONAL, "<", Line: 30, Col: 1>
+<RELATIONAL, "<=", Line: 30, Col: 3>
+<RELATIONAL, ">", Line: 30, Col: 6>
+<RELATIONAL, ">=", Line: 30, Col: 8>
+<RELATIONAL, "==", Line: 30, Col: 11>
+<RELATIONAL, "!=", Line: 30, Col: 14>
+<COMMENT, "## All arithmetic operators", Line: 32, Col: 1>
+<OPERATOR, "+", Line: 33, Col: 1>
+<OPERATOR, "-", Line: 33, Col: 3>
+<OPERATOR, "*", Line: 33, Col: 5>
+<OPERATOR, "/", Line: 33, Col: 7>
+<OPERATOR, "%", Line: 33, Col: 9>
+<COMMENT, "## Multiple comments", Line: 35, Col: 1>
+<COMMENT, "##First comment", Line: 36, Col: 1>
+<COMMENT, "##Second comment", Line: 37, Col: 1>
+<COMMENT, "##Third comment with special chars: +-*/<>=!@#$", Line: 38, Col: 1>
+<COMMENT, "## Operators next to each other", Line: 40, Col: 1>
+<OPERATOR, "+", Line: 41, Col: 1>
+<OPERATOR, "-", Line: 41, Col: 3>
+<OPERATOR, "*", Line: 41, Col: 5>
+<OPERATOR, "/", Line: 41, Col: 7>
+<OPERATOR, "%", Line: 41, Col: 9>
+<RELATIONAL, "<", Line: 42, Col: 1>
+<RELATIONAL, ">", Line: 42, Col: 3>
+<RELATIONAL, "==", Line: 42, Col: 5>
+<RELATIONAL, "!=", Line: 42, Col: 8>
+<COMMENT, "## Mixed tokens on same line", Line: 44, Col: 1>
+<IDENTIFIER, "Variable_1", Line: 45, Col: 1>
+<INTEGER, "+123", Line: 45, Col: 12>
+<INTEGER, "-456", Line: 45, Col: 17>
+<FLOAT, "12.34", Line: 45, Col: 22>
+<IDENTIFIER, "A", Line: 46, Col: 1>
+<BOOLEAN, "true", Line: 46, Col: 3>
+<IDENTIFIER, "B", Line: 46, Col: 8>
+<BOOLEAN, "false", Line: 46, Col: 10>
+<IDENTIFIER, "C", Line: 46, Col: 16>
+<RELATIONAL, "<", Line: 46, Col: 18>
+<IDENTIFIER, "D", Line: 46, Col: 20>
+
+=== SYMBOL TABLE ===
+
+========== SYMBOL TABLE ==========
+Name                 Type            First Line   Frequency
+============================================================
+  A                    IDENTIFIER      Line: 4     Freq: 2
+  Z                    IDENTIFIER      Line: 5     Freq: 1
+  Variable_name_with_max_length_3 IDENTIFIER      Line: 8     Freq: 1
+  Variable_1           IDENTIFIER      Line: 45    Freq: 1
+  B                    IDENTIFIER      Line: 46    Freq: 1
+  C                    IDENTIFIER      Line: 46    Freq: 1
+  D                    IDENTIFIER      Line: 46    Freq: 1
+============================================================
+Total unique identifiers: 7
+
+
+=== LEXICAL ERRORS ===
+No lexical errors found.
+
+=== SCANNING STATISTICS ===
+Total Lines: 47
+Total Tokens: 132
+Unique Identifiers: 7
+Lexical Errors: 0
+
+=== JFLEX SCANNER COMPLETED ===
+
