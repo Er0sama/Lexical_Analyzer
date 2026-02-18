@@ -1,0 +1,55 @@
+--- test_results/test2_output.txt	2026-02-18 20:52:09.056301314 +0500
++++ jflex_results/test2_output.txt	2026-02-18 20:42:51.257135636 +0500
+@@ -1,6 +1,6 @@
+-Scanning file: ../tests/test2.lang
+ 
+-========== TOKENS ==========
++=== TOKENS RECOGNIZED ===
++
+ <COMMENT, "## Test file 2: Complex expressions", Line: 1, Col: 1>
+ <COMMENT, "## Testing real-world code patterns", Line: 2, Col: 1>
+ <IDENTIFIER, "Counter_value", Line: 4, Col: 1>
+@@ -74,24 +74,8 @@
+ <IDENTIFIER, "R", Line: 24, Col: 8>
+ <RELATIONAL, ">=", Line: 24, Col: 10>
+ <IDENTIFIER, "S", Line: 24, Col: 13>
+-============================
+-
+-
+-========== STATISTICS ==========
+-Total tokens: 73
+-Lines processed: 25
+-Comments removed: 4
+-
+-Token counts by type:
+-  COMMENT: 4
+-  INTEGER: 7
+-  BOOLEAN: 4
+-  FLOAT: 1
+-  RELATIONAL: 9
+-  IDENTIFIER: 35
+-  OPERATOR: 13
+-================================
+ 
++=== SYMBOL TABLE ===
+ 
+ ========== SYMBOL TABLE ==========
+ Name                 Type            First Line   Frequency
+@@ -126,7 +110,14 @@
+ Total unique identifiers: 26
+ 
+ 
+-========== ERROR SUMMARY ==========
+-  No lexical errors found. ✓
+-===================================
++=== LEXICAL ERRORS ===
++No lexical errors found.
++
++=== SCANNING STATISTICS ===
++Total Lines: 25
++Total Tokens: 151
++Unique Identifiers: 26
++Lexical Errors: 0
++
++=== JFLEX SCANNER COMPLETED ===
+ 

@@ -1,0 +1,55 @@
+--- test_results/test3_output.txt	2026-02-18 20:52:09.147998058 +0500
++++ jflex_results/test3_output.txt	2026-02-18 20:42:51.343731708 +0500
+@@ -1,6 +1,6 @@
+-Scanning file: ../tests/test3.lang
+ 
+-========== TOKENS ==========
++=== TOKENS RECOGNIZED ===
++
+ <COMMENT, "## Test file 3: Edge cases and boundary conditions", Line: 1, Col: 1>
+ <COMMENT, "## Single character identifier (minimum length)", Line: 3, Col: 1>
+ <IDENTIFIER, "A", Line: 4, Col: 1>
+@@ -62,24 +62,8 @@
+ <IDENTIFIER, "C", Line: 46, Col: 16>
+ <RELATIONAL, "<", Line: 46, Col: 18>
+ <IDENTIFIER, "D", Line: 46, Col: 20>
+-============================
+-
+-
+-========== STATISTICS ==========
+-Total tokens: 61
+-Lines processed: 47
+-Comments removed: 15
+-
+-Token counts by type:
+-  COMMENT: 15
+-  INTEGER: 6
+-  OPERATOR: 10
+-  FLOAT: 7
+-  RELATIONAL: 11
+-  IDENTIFIER: 8
+-  BOOLEAN: 4
+-================================
+ 
++=== SYMBOL TABLE ===
+ 
+ ========== SYMBOL TABLE ==========
+ Name                 Type            First Line   Frequency
+@@ -95,7 +79,14 @@
+ Total unique identifiers: 7
+ 
+ 
+-========== ERROR SUMMARY ==========
+-  No lexical errors found. ✓
+-===================================
++=== LEXICAL ERRORS ===
++No lexical errors found.
++
++=== SCANNING STATISTICS ===
++Total Lines: 47
++Total Tokens: 132
++Unique Identifiers: 7
++Lexical Errors: 0
++
++=== JFLEX SCANNER COMPLETED ===
+ 

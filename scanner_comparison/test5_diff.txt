@@ -1,0 +1,55 @@
+--- test_results/test5_output.txt	2026-02-18 20:52:09.380621231 +0500
++++ jflex_results/test5_output.txt	2026-02-18 20:42:51.541129892 +0500
+@@ -1,6 +1,6 @@
+-Scanning file: ../tests/test5.lang
+ 
+-========== TOKENS ==========
++=== TOKENS RECOGNIZED ===
++
+ <COMMENT, "## Test file 5: Comments and real program structure", Line: 1, Col: 1>
+ <COMMENT, "## Simulating a simple program in our custom language", Line: 2, Col: 1>
+ <COMMENT, "##Program: Calculate factorial", Line: 4, Col: 1>
+@@ -92,24 +92,8 @@
+ <IDENTIFIER, "Status_code", Line: 48, Col: 1>
+ <INTEGER, "0", Line: 48, Col: 13>
+ <COMMENT, "##This is the last comment", Line: 50, Col: 1>
+-============================
+-
+-
+-========== STATISTICS ==========
+-Total tokens: 91
+-Lines processed: 51
+-Comments removed: 14
+-
+-Token counts by type:
+-  COMMENT: 14
+-  INTEGER: 7
+-  FLOAT: 3
+-  RELATIONAL: 9
+-  BOOLEAN: 4
+-  IDENTIFIER: 47
+-  OPERATOR: 7
+-================================
+ 
++=== SYMBOL TABLE ===
+ 
+ ========== SYMBOL TABLE ==========
+ Name                 Type            First Line   Frequency
+@@ -135,7 +119,14 @@
+ Total unique identifiers: 17
+ 
+ 
+-========== ERROR SUMMARY ==========
+-  No lexical errors found. ✓
+-===================================
++=== LEXICAL ERRORS ===
++No lexical errors found.
++
++=== SCANNING STATISTICS ===
++Total Lines: 51
++Total Tokens: 194
++Unique Identifiers: 17
++Lexical Errors: 0
++
++=== JFLEX SCANNER COMPLETED ===
+ 

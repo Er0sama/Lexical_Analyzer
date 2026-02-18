@@ -1,0 +1,55 @@
+--- test_results/test1_output.txt	2026-02-18 20:52:08.935983320 +0500
++++ jflex_results/test1_output.txt	2026-02-18 20:42:51.168336664 +0500
+@@ -1,6 +1,6 @@
+-Scanning file: ../tests/test1.lang
+ 
+-========== TOKENS ==========
++=== TOKENS RECOGNIZED ===
++
+ <COMMENT, "## Test file 1: All valid tokens", Line: 1, Col: 1>
+ <COMMENT, "## Testing basic token recognition", Line: 2, Col: 1>
+ <IDENTIFIER, "Variable_name", Line: 4, Col: 1>
+@@ -37,24 +37,8 @@
+ <OPERATOR, "/", Line: 28, Col: 7>
+ <OPERATOR, "%", Line: 28, Col: 9>
+ <COMMENT, "## Arithmetic operators", Line: 28, Col: 12>
+-============================
+-
+-
+-========== STATISTICS ==========
+-Total tokens: 36
+-Lines processed: 29
+-Comments removed: 10
+-
+-Token counts by type:
+-  COMMENT: 10
+-  INTEGER: 4
+-  OPERATOR: 5
+-  FLOAT: 5
+-  RELATIONAL: 6
+-  IDENTIFIER: 4
+-  BOOLEAN: 2
+-================================
+ 
++=== SYMBOL TABLE ===
+ 
+ ========== SYMBOL TABLE ==========
+ Name                 Type            First Line   Frequency
+@@ -67,7 +51,14 @@
+ Total unique identifiers: 4
+ 
+ 
+-========== ERROR SUMMARY ==========
+-  No lexical errors found. ✓
+-===================================
++=== LEXICAL ERRORS ===
++No lexical errors found.
++
++=== SCANNING STATISTICS ===
++Total Lines: 29
++Total Tokens: 85
++Unique Identifiers: 4
++Lexical Errors: 0
++
++=== JFLEX SCANNER COMPLETED ===
+ 
