@@ -1,0 +1,446 @@
+# CustomLang Language Grammar Specification
+
+## Formal Specification for Lexical Analyzer
+**Version 1.0 - February 18, 2026**
+
+---
+
+## Character Classes
+
+```
+UPPERCASE  = [A-Z]
+LOWERCASE  = [a-z]
+DIGIT      = [0-9]
+SIGN       = [+-]
+UNDERSCORE = _
+DOT        = .
+HASH       = #
+NEWLINE    = \n
+WHITESPACE = [ \t\r\n]
+```
+
+---
+
+## Token Regular Expressions
+
+### 1. IDENTIFIER
+```
+IDENTIFIER → UPPERCASE (LOWERCASE | DIGIT | UNDERSCORE){0,30}
+```
+
+Pattern: Must start with uppercase letter, followed by 0-30 characters (lowercase, digits, or underscores).
+
+Length constraint: 1 ≤ length ≤ 31
+
+---
+
+### 2. INTEGER
+```
+INTEGER → SIGN? DIGIT+
+```
+
+Pattern: Optional sign followed by one or more digits.
+
+---
+
+### 3. FLOAT
+```
+FLOAT → SIGN? DIGIT+ DOT DIGIT{1,6} EXPONENT?
+
+where:
+EXPONENT → (e | E) SIGN? DIGIT+
+```
+
+Pattern: Optional sign, integer part, mandatory decimal point, 1-6 fractional digits, optional exponent.
+
+Constraints:
+- Fractional part: 1 ≤ decimal_digits ≤ 6
+- Exponent digits: ≥ 1
+
+---
+
+### 4. BOOLEAN
+```
+BOOLEAN → true | false
+```
+
+Pattern: Exact keyword match, case-sensitive.
+
+---
+
+### 5. COMMENT
+```
+COMMENT → ## (ANY_CHAR)*
+
+where:
+ANY_CHAR → any character except NEWLINE
+```
+
+Pattern: Double hash followed by any characters until newline.
+
+---
+
+### 6. RELATIONAL_OPERATOR
+```
+RELATIONAL_OP → < | <= | > | >= | == | !=
+```
+
+Pattern: One or two-character relational operators.
+
+Note: Single `=` or `!` are NOT valid tokens (must be followed by `=`).
+
+---
+
+### 7. ARITHMETIC_OPERATOR
+```
+ARITHMETIC_OP → + | - | * | / | %
+```
+
+Pattern: Single-character arithmetic operators.
+
+Note: `+` and `-` have dual meaning:
+- As standalone: arithmetic operator
+- Before digits: part of signed number (INTEGER or FLOAT)
+
+---
+
+## NFA/DFA State Specifications
+
+### Identifier NFA
+```
+State Diagram:
+    [A-Z]       [a-z0-9_]
+q0 -------> q1 <----------+
+           (F)            |
+                          |
+            [a-z0-9_]     |
+            --------------+
+
+States: q0 (start), q1 (final, accepting)
+Alphabet: {A-Z, a-z, 0-9, _}
+Transitions:
+  δ(q0, [A-Z]) = q1
+  δ(q1, [a-z0-9_]) = q1
+```
+
+---
+
+### Integer/Float NFA (Combined)
+```
+State Diagram:
+                [0-9]        [0-9]
+    [+-]     +-------->  +------+
+q0 -----> q1 | [0-9]    | [0-9] | q2 (INTEGER final)
+    |      |  +-------->     +---+
+    |      +----------------+
+    +-------------------------+
+           [0-9]
+
+    [.]         [0-9]      [0-9]
+q2 ----> q3  --------> q4 <-----+
+                       (F)      |
+                                |
+       [eE]      [+-]     [0-9] |
+q4 --------> q5 -------> q6 ----+-----> q7 (FLOAT_EXP final)
+                  |                     (F)
+                  |       [0-9]        |
+                  +-------------------+
+
+States: q0-q7
+Final: q2 (INTEGER), q4 (FLOAT), q7 (FLOAT with exponent)
+```
+
+---
+
+### Comment NFA
+```
+State Diagram:
+    [#]       [#]        [^\n]
+q0 ----> q1 ----> q2 <-----------+
+                 (F)             |
+                                 |
+              [^\n]              |
+              -------------------+
+
+States: q0 (start), q1 (single hash), q2 (final, comment)
+Transitions:
+  δ(q0, #) = q1
+  δ(q1, #) = q2
+  δ(q2, any except \n) = q2
+```
+
+---
+
+### Boolean "true" NFA
+```
+State Diagram:
+    [t]     [r]     [u]     [e]
+q0 ---> q1 ---> q2 ---> q3 ---> q4 (final)
+
+States: q0-q4
+Final: q4 only
+Exact match required: t-r-u-e
+```
+
+---
+
+### Boolean "false" NFA
+```
+State Diagram:
+    [f]     [a]     [l]     [s]     [e]
+q0 ---> q1 ---> q2 ---> q3 ---> q4 ---> q5 (final)
+
+States: q0-q5
+Final: q5 only
+Exact match required: f-a-l-s-e
+```
+
+---
+
+### Relational Operators NFA
+```
+For "<=":
+    [<]     [=]
+q0 ---> q1 ---> q2
+       (F)     (F)
+
+For ">=":
+    [>]     [=]
+q0 ---> q1 ---> q2
+       (F)     (F)
+
+For "==":
+    [=]     [=]
+q0 ---> q1 ---> q2
+               (F)
+
+For "!=":
+    [!]     [=]
+q0 ---> q1 ---> q2
+               (F)
+
+Note: q1 is final for < and >, NOT final for = and !
+```
+
+---
+
+## Minimized DFA Transition Table
+
+### Complete 32-State DFA
+
+| State | A-Z | a-z | 0-9 | _ | + | - | * | / | % | . | # | < | > | = | ! | t | f | e/E | Final? | Token |
+|-------|-----|-----|-----|---|---|---|---|---|---|---|---|---|---|---|---|---|---|-----|--------|-------|
+| q0    | q1  | -   | q4  | - | q2| q3| q29|q30|q31| - |q10|q21|q23|q25|q27|q12|q16| -   | No     | -     |
+| q1    | -   | q1  | q1  |q1 | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| ID    |
+| q2    | -   | -   | q4  | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| OP    |
+| q3    | -   | -   | q4  | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| OP    |
+| q4    | -   | -   | q4  | - | - | - | - | - | - | q5| - | - | - | - | - | - | - | -   | **YES**| INT   |
+| q5    | -   | -   | q6  | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | No     | -     |
+| q6    | -   | -   | q6  | - | - | - | - | - | - | - | - | - | - | - | - | - | - | q7  | **YES**| FLOAT |
+| q7    | -   | -   | q9  | - | q8| q8| - | - | - | - | - | - | - | - | - | - | - | -   | No     | -     |
+| q8    | -   | -   | q9  | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | No     | -     |
+| q9    | -   | -   | q9  | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| FLOAT |
+| q10   | -   | -   | -   | - | - | - | - | - | - | - |q11| - | - | - | - | - | - | -   | No     | -     |
+| q11   |Any except \n|  |  |   |   |   |   |   |   |   |   |   |   |   |   |   |   |     | **YES**| COM   |
+| q12   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | No     | -     |
+| q13   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | No     | -     |
+| q14   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | No     | -     |
+| q15   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| BOOL  |
+| q16-20| (false path, similar structure)                                                   | **YES**| BOOL  |
+| q21   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | q22| - | - | - | -   | **YES**| REL   |
+| q22   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| REL   |
+| q23   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | q24| - | - | - | -   | **YES**| REL   |
+| q24   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| REL   |
+| q25   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | q26| - | - | - | -   | No     | -     |
+| q26   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| REL   |
+| q27   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | q28| - | - | - | -   | No     | -     |
+| q28   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| REL   |
+| q29   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| OP    |
+| q30   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| OP    |
+| q31   | -   | -   | -   | - | - | - | - | - | - | - | - | - | - | - | - | - | - | -   | **YES**| OP    |
+
+**Legend:**
+- `-` = Invalid transition (error state)
+- (F) = Final/Accepting state
+- ID = IDENTIFIER, INT = INTEGER, FLOAT = FLOAT, BOOL = BOOLEAN
+- COM = COMMENT, REL = RELATIONAL, OP = OPERATOR
+
+---
+
+## Maximal Munch Principle
+
+The scanner implements **longest match** strategy:
+
+1. Continue reading while valid transitions exist
+2. Remember last final state encountered
+3. When no valid transition:
+   - If last final state exists: emit that token
+   - Otherwise: report error
+
+**Examples:**
+```
+Input: "<="
+- Read '<' → q21 (final, but continue)
+- Read '=' → q22 (final, stop)
+- Emit: RELATIONAL "<="
+
+Input: "< ="
+- Read '<' → q21 (final)
+- Peek '=' but space before it
+- Emit: RELATIONAL "<"
+- Then error on '=' (needs second '=')
+```
+
+---
+
+## Ambiguity Resolution
+
+### Plus/Minus Operators
+```
+Rule: + and - are FINAL states (operators)
+      BUT they transition to integer state on digits
+
+Example:
+  "+" → Emit OPERATOR "+"
+  "+123" → Keep going → Emit INTEGER "+123"
+```
+
+### Relational Operators
+```
+Priority: Multi-character before single
+  "<=" before "<"
+  ">=" before ">"
+  "==" (only valid form, single '=' is error)
+  "!=" (only valid form, single '!' is error)
+```
+
+### Keywords vs Identifiers
+```
+In this language:
+  "true" and "false" → BOOLEAN (hardcoded in DFA)
+  "True" or "FALSE" → IDENTIFIER (uppercase start)
+```
+
+---
+
+## Error Conditions
+
+### 1. Invalid Character
+```
+Any character not in alphabet: @, $, &, ^, etc.
+Action: Report error, skip character, continue
+```
+
+### 2. Malformed Literal
+```
+"123.": decimal point without fractional part (q5 not final)
+"1.2e": exponent without digits (q7 not final)
+"1.2345678": more than 6 decimal places (reject at 7th digit)
+```
+
+### 3. Invalid Identifier
+```
+"abc": starts with lowercase (no transition from q0)
+"_Test": starts with underscore (no transition from q0)
+```
+
+### 4. Incomplete Token
+```
+"#": single hash (q10 not final, needs second #)
+"=": single equals (q25 not final, needs second =)
+"!": single exclamation (q27 not final, needs =)
+```
+
+---
+
+## Whitespace Handling
+
+```
+WHITESPACE → [ \t\r\n]+
+
+Action: Skip but track line/column numbers
+  - Space: increment column by 1
+  - Tab: increment column by 4
+  - Newline: increment line by 1, reset column to 1
+  - Carriage return: same as newline
+```
+
+---
+
+## Token Output Format
+
+```
+<TOKEN_TYPE, "lexeme", Line: <line>, Col: <column>>
+
+Example:
+<IDENTIFIER, "Variable_name", Line: 1, Col: 1>
+<INTEGER, "+123", Line: 1, Col: 15>
+<FLOAT, "12.34e-5", Line: 2, Col: 8>
+<BOOLEAN, "true", Line: 3, Col: 1>
+<COMMENT, "##This is a comment", Line: 4, Col: 1>
+<RELATIONAL, "<=", Line: 5, Col: 10>
+<OPERATOR, "*", Line: 6, Col: 5>
+```
+
+---
+
+## Symbol Table Format
+
+```
+For each IDENTIFIER token:
+  Name: identifier lexeme
+  Type: "IDENTIFIER"
+  First Line: line number of first occurrence
+  Frequency: number of occurrences
+
+Example:
+Variable_name    IDENTIFIER    Line: 1      Freq: 3
+Counter          IDENTIFIER    Line: 5      Freq: 7
+```
+
+---
+
+## Statistics Output
+
+```
+Total tokens: <count> (excluding EOF)
+Lines processed: <line_count>
+Comments removed: <comment_count>
+
+Token counts by type:
+  IDENTIFIER: <count>
+  INTEGER: <count>
+  FLOAT: <count>
+  BOOLEAN: <count>
+  COMMENT: <count>
+  RELATIONAL: <count>
+  OPERATOR: <count>
+  ERROR: <count>
+```
+
+---
+
+## Implementation Notes
+
+### State Machine
+- Implemented as explicit state constants (q0-q31)
+- Transition function: `int transition(int state, char input)`
+- Final state check: `boolean isFinalState(int state)`
+
+### Lookahead
+- Scanner peeks next character before stopping at final state
+- Implements true maximal munch
+
+### Error Recovery
+- On error: emit ERROR token, advance by 1 char, continue
+- Collect all errors for end-of-scan summary
+
+### Performance
+- O(n) time complexity where n = input length
+- O(1) space for DFA (fixed 32 states)
+- O(k) space for tokens where k = number of tokens
+
+---
+
+*End of Grammar Specification*  
+*CustomLang v1.0 - February 18, 2026*
