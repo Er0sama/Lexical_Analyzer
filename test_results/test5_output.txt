@@ -1,0 +1,141 @@
+Scanning file: ../tests/test5.lang
+
+========== TOKENS ==========
+<COMMENT, "## Test file 5: Comments and real program structure", Line: 1, Col: 1>
+<COMMENT, "## Simulating a simple program in our custom language", Line: 2, Col: 1>
+<COMMENT, "##Program: Calculate factorial", Line: 4, Col: 1>
+<COMMENT, "##Author: Student", Line: 5, Col: 1>
+<COMMENT, "##Date: February 18, 2026", Line: 6, Col: 1>
+<COMMENT, "## Variable declarations", Line: 8, Col: 1>
+<IDENTIFIER, "Num", Line: 9, Col: 1>
+<INTEGER, "5", Line: 9, Col: 5>
+<IDENTIFIER, "Result", Line: 10, Col: 1>
+<INTEGER, "1", Line: 10, Col: 8>
+<IDENTIFIER, "Counter", Line: 11, Col: 1>
+<INTEGER, "1", Line: 11, Col: 9>
+<COMMENT, "##Main computation loop", Line: 13, Col: 1>
+<IDENTIFIER, "Counter", Line: 14, Col: 1>
+<RELATIONAL, "<=", Line: 14, Col: 9>
+<IDENTIFIER, "Num", Line: 14, Col: 12>
+<IDENTIFIER, "Result", Line: 15, Col: 1>
+<IDENTIFIER, "Result", Line: 15, Col: 8>
+<OPERATOR, "*", Line: 15, Col: 15>
+<IDENTIFIER, "Counter", Line: 15, Col: 17>
+<IDENTIFIER, "Counter", Line: 16, Col: 1>
+<IDENTIFIER, "Counter", Line: 16, Col: 9>
+<OPERATOR, "+", Line: 16, Col: 17>
+<INTEGER, "1", Line: 16, Col: 19>
+<COMMENT, "##Check conditions", Line: 18, Col: 1>
+<IDENTIFIER, "Counter", Line: 19, Col: 1>
+<RELATIONAL, ">", Line: 19, Col: 9>
+<IDENTIFIER, "Num", Line: 19, Col: 11>
+<BOOLEAN, "true", Line: 19, Col: 15>
+<IDENTIFIER, "Result", Line: 20, Col: 1>
+<RELATIONAL, "==", Line: 20, Col: 8>
+<INTEGER, "120", Line: 20, Col: 11>
+<BOOLEAN, "false", Line: 20, Col: 15>
+<COMMENT, "##Floating point operations", Line: 22, Col: 1>
+<IDENTIFIER, "Pi", Line: 23, Col: 1>
+<FLOAT, "3.14159", Line: 23, Col: 4>
+<IDENTIFIER, "E", Line: 24, Col: 1>
+<FLOAT, "2.71828", Line: 24, Col: 3>
+<IDENTIFIER, "Exp_val", Line: 25, Col: 1>
+<FLOAT, "1.23e-4", Line: 25, Col: 9>
+<COMMENT, "##Boolean flags", Line: 27, Col: 1>
+<IDENTIFIER, "Is_done", Line: 28, Col: 1>
+<BOOLEAN, "false", Line: 28, Col: 9>
+<IDENTIFIER, "Has_error", Line: 29, Col: 1>
+<BOOLEAN, "false", Line: 29, Col: 11>
+<COMMENT, "##Relational comparisons", Line: 31, Col: 1>
+<IDENTIFIER, "Counter", Line: 32, Col: 1>
+<RELATIONAL, "<", Line: 32, Col: 9>
+<IDENTIFIER, "Num", Line: 32, Col: 11>
+<IDENTIFIER, "Counter", Line: 33, Col: 1>
+<RELATIONAL, "<=", Line: 33, Col: 9>
+<IDENTIFIER, "Num", Line: 33, Col: 12>
+<IDENTIFIER, "Counter", Line: 34, Col: 1>
+<RELATIONAL, ">", Line: 34, Col: 9>
+<IDENTIFIER, "Num", Line: 34, Col: 11>
+<IDENTIFIER, "Counter", Line: 35, Col: 1>
+<RELATIONAL, ">=", Line: 35, Col: 9>
+<IDENTIFIER, "Num", Line: 35, Col: 12>
+<IDENTIFIER, "Counter", Line: 36, Col: 1>
+<RELATIONAL, "==", Line: 36, Col: 9>
+<IDENTIFIER, "Num", Line: 36, Col: 12>
+<IDENTIFIER, "Counter", Line: 37, Col: 1>
+<RELATIONAL, "!=", Line: 37, Col: 9>
+<IDENTIFIER, "Num", Line: 37, Col: 12>
+<COMMENT, "##Arithmetic operations", Line: 39, Col: 1>
+<IDENTIFIER, "Sum", Line: 40, Col: 1>
+<IDENTIFIER, "A", Line: 40, Col: 5>
+<OPERATOR, "+", Line: 40, Col: 7>
+<IDENTIFIER, "B", Line: 40, Col: 9>
+<IDENTIFIER, "Difference", Line: 41, Col: 1>
+<IDENTIFIER, "A", Line: 41, Col: 12>
+<OPERATOR, "-", Line: 41, Col: 14>
+<IDENTIFIER, "B", Line: 41, Col: 16>
+<IDENTIFIER, "Product", Line: 42, Col: 1>
+<IDENTIFIER, "A", Line: 42, Col: 9>
+<OPERATOR, "*", Line: 42, Col: 11>
+<IDENTIFIER, "B", Line: 42, Col: 13>
+<IDENTIFIER, "Quotient", Line: 43, Col: 1>
+<IDENTIFIER, "A", Line: 43, Col: 10>
+<OPERATOR, "/", Line: 43, Col: 12>
+<IDENTIFIER, "B", Line: 43, Col: 14>
+<IDENTIFIER, "Remainder", Line: 44, Col: 1>
+<IDENTIFIER, "A", Line: 44, Col: 11>
+<OPERATOR, "%", Line: 44, Col: 13>
+<IDENTIFIER, "B", Line: 44, Col: 15>
+<COMMENT, "##End of program", Line: 46, Col: 1>
+<IDENTIFIER, "Final_value", Line: 47, Col: 1>
+<INTEGER, "+12345", Line: 47, Col: 13>
+<IDENTIFIER, "Status_code", Line: 48, Col: 1>
+<INTEGER, "0", Line: 48, Col: 13>
+<COMMENT, "##This is the last comment", Line: 50, Col: 1>
+============================
+
+
+========== STATISTICS ==========
+Total tokens: 91
+Lines processed: 51
+Comments removed: 14
+
+Token counts by type:
+  COMMENT: 14
+  INTEGER: 7
+  FLOAT: 3
+  RELATIONAL: 9
+  BOOLEAN: 4
+  IDENTIFIER: 47
+  OPERATOR: 7
+================================
+
+
+========== SYMBOL TABLE ==========
+Name                 Type            First Line   Frequency
+============================================================
+  Num                  IDENTIFIER      Line: 9     Freq: 9
+  Result               IDENTIFIER      Line: 10    Freq: 4
+  Counter              IDENTIFIER      Line: 11    Freq: 12
+  Pi                   IDENTIFIER      Line: 23    Freq: 1
+  E                    IDENTIFIER      Line: 24    Freq: 1
+  Exp_val              IDENTIFIER      Line: 25    Freq: 1
+  Is_done              IDENTIFIER      Line: 28    Freq: 1
+  Has_error            IDENTIFIER      Line: 29    Freq: 1
+  Sum                  IDENTIFIER      Line: 40    Freq: 1
+  A                    IDENTIFIER      Line: 40    Freq: 5
+  B                    IDENTIFIER      Line: 40    Freq: 5
+  Difference           IDENTIFIER      Line: 41    Freq: 1
+  Product              IDENTIFIER      Line: 42    Freq: 1
+  Quotient             IDENTIFIER      Line: 43    Freq: 1
+  Remainder            IDENTIFIER      Line: 44    Freq: 1
+  Final_value          IDENTIFIER      Line: 47    Freq: 1
+  Status_code          IDENTIFIER      Line: 48    Freq: 1
+============================================================
+Total unique identifiers: 17
+
+
+========== ERROR SUMMARY ==========
+  No lexical errors found. ✓
+===================================
+

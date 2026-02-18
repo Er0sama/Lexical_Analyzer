@@ -1,0 +1,73 @@
+Scanning file: ../tests/test1.lang
+
+========== TOKENS ==========
+<COMMENT, "## Test file 1: All valid tokens", Line: 1, Col: 1>
+<COMMENT, "## Testing basic token recognition", Line: 2, Col: 1>
+<IDENTIFIER, "Variable_name", Line: 4, Col: 1>
+<COMMENT, "## Identifier test", Line: 4, Col: 16>
+<IDENTIFIER, "Counter_123", Line: 5, Col: 1>
+<IDENTIFIER, "A", Line: 6, Col: 1>
+<IDENTIFIER, "Test_var_2024", Line: 7, Col: 1>
+<INTEGER, "+100", Line: 9, Col: 1>
+<COMMENT, "## Integer tests", Line: 9, Col: 7>
+<INTEGER, "-42", Line: 10, Col: 1>
+<INTEGER, "0", Line: 11, Col: 1>
+<INTEGER, "999", Line: 12, Col: 1>
+<FLOAT, "+123.456", Line: 14, Col: 1>
+<COMMENT, "## Float tests", Line: 14, Col: 11>
+<FLOAT, "-0.123456", Line: 15, Col: 1>
+<FLOAT, "12.34e10", Line: 16, Col: 1>
+<FLOAT, "1.0E-5", Line: 17, Col: 1>
+<FLOAT, "999.999999", Line: 18, Col: 1>
+<COMMENT, "##This is a single-line comment", Line: 20, Col: 1>
+<COMMENT, "## Another comment with symbols: +*/%<>=!", Line: 21, Col: 1>
+<BOOLEAN, "true", Line: 23, Col: 1>
+<COMMENT, "## Boolean tests", Line: 23, Col: 7>
+<BOOLEAN, "false", Line: 24, Col: 1>
+<RELATIONAL, "<", Line: 26, Col: 1>
+<RELATIONAL, ">", Line: 26, Col: 3>
+<RELATIONAL, "<=", Line: 26, Col: 5>
+<RELATIONAL, ">=", Line: 26, Col: 8>
+<RELATIONAL, "==", Line: 26, Col: 11>
+<RELATIONAL, "!=", Line: 26, Col: 14>
+<COMMENT, "## Relational operators", Line: 26, Col: 18>
+<OPERATOR, "+", Line: 28, Col: 1>
+<OPERATOR, "-", Line: 28, Col: 3>
+<OPERATOR, "*", Line: 28, Col: 5>
+<OPERATOR, "/", Line: 28, Col: 7>
+<OPERATOR, "%", Line: 28, Col: 9>
+<COMMENT, "## Arithmetic operators", Line: 28, Col: 12>
+============================
+
+
+========== STATISTICS ==========
+Total tokens: 36
+Lines processed: 29
+Comments removed: 10
+
+Token counts by type:
+  COMMENT: 10
+  INTEGER: 4
+  OPERATOR: 5
+  FLOAT: 5
+  RELATIONAL: 6
+  IDENTIFIER: 4
+  BOOLEAN: 2
+================================
+
+
+========== SYMBOL TABLE ==========
+Name                 Type            First Line   Frequency
+============================================================
+  Variable_name        IDENTIFIER      Line: 4     Freq: 1
+  Counter_123          IDENTIFIER      Line: 5     Freq: 1
+  A                    IDENTIFIER      Line: 6     Freq: 1
+  Test_var_2024        IDENTIFIER      Line: 7     Freq: 1
+============================================================
+Total unique identifiers: 4
+
+
+========== ERROR SUMMARY ==========
+  No lexical errors found. ✓
+===================================
+

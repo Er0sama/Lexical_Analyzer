@@ -1,0 +1,266 @@
+Scanning file: ../tests/test4.lang
+ERROR [INVALID_CHARACTER] at Line 5, Col 1: 'a' - Character 'a' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 5, Col 2: 'b' - Character 'b' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 5, Col 3: 'c' - Character 'c' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 6, Col 1: 't' - Character 't' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 6, Col 2: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 6, Col 3: 's' - Character 's' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 6, Col 4: 't' - Character 't' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 6, Col 5: '_' - Character '_' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 6, Col 6: 'v' - Character 'v' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 6, Col 7: 'a' - Character 'a' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 6, Col 8: 'r' - Character 'r' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 7, Col 1: 'm' - Character 'm' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 7, Col 2: 'y' - Character 'y' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 10, Col 1: '@' - Character '@' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 10, Col 2: 's' - Character 's' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 10, Col 3: 'y' - Character 'y' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 10, Col 4: 'm' - Character 'm' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 10, Col 5: 'b' - Character 'b' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 10, Col 6: 'o' - Character 'o' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 10, Col 7: 'l' - Character 'l' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 11, Col 1: '$' - Character '$' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 11, Col 2: 'd' - Character 'd' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 11, Col 3: 'o' - Character 'o' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 11, Col 4: 'l' - Character 'l' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 11, Col 5: 'l' - Character 'l' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 11, Col 6: 'a' - Character 'a' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 11, Col 7: 'r' - Character 'r' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 1: '&' - Character '&' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 2: 'a' - Character 'a' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 3: 'm' - Character 'm' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 4: 'p' - Character 'p' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 5: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 6: 'r' - Character 'r' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 7: 's' - Character 's' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 8: 'a' - Character 'a' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 9: 'n' - Character 'n' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 12, Col 10: 'd' - Character 'd' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 15, Col 5: '.' - Character '.' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 16, Col 1: '.' - Character '.' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 17, Col 4: '.' - Character '.' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 17, Col 5: '.' - Character '.' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 18, Col 4: '.' - Character '.' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 19, Col 5: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 20, Col 6: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 24, Col 1: '=' - Character '=' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 25, Col 1: '!' - Character '!' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 26, Col 1: '#' - Character '#' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 32: 'n' - Character 'n' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 33: 'a' - Character 'a' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 34: 'm' - Character 'm' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 35: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 36: '_' - Character '_' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 37: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 38: 'x' - Character 'x' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 39: 'c' - Character 'c' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 40: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 41: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 42: 'd' - Character 'd' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 43: 'i' - Character 'i' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 44: 'n' - Character 'n' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 45: 'g' - Character 'g' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 46: '_' - Character '_' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 47: 'm' - Character 'm' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 48: 'a' - Character 'a' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 49: 'x' - Character 'x' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 50: 'i' - Character 'i' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 51: 'm' - Character 'm' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 52: 'u' - Character 'u' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 53: 'm' - Character 'm' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 54: '_' - Character '_' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 55: 'l' - Character 'l' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 56: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 57: 'n' - Character 'n' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 58: 'g' - Character 'g' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 59: 't' - Character 't' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 30, Col 60: 'h' - Character 'h' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 41, Col 12: '@' - Character '@' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 41, Col 13: 'e' - Character 'e' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 41, Col 14: 'r' - Character 'r' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 41, Col 15: 'r' - Character 'r' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 41, Col 16: 'o' - Character 'o' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 41, Col 17: 'r' - Character 'r' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 42, Col 6: '$' - Character '$' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 42, Col 7: 'i' - Character 'i' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 42, Col 8: 'n' - Character 'n' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 42, Col 9: 'v' - Character 'v' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 42, Col 10: 'a' - Character 'a' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 42, Col 11: 'l' - Character 'l' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 42, Col 12: 'i' - Character 'i' is not recognized in this language
+ERROR [INVALID_CHARACTER] at Line 42, Col 13: 'd' - Character 'd' is not recognized in this language
+
+========== TOKENS ==========
+<COMMENT, "## Test file 4: Lexical errors", Line: 1, Col: 1>
+<COMMENT, "## Testing error detection and recovery", Line: 2, Col: 1>
+<COMMENT, "## Invalid identifiers (lowercase start)", Line: 4, Col: 1>
+<ERROR, "a", Line: 5, Col: 1>
+<ERROR, "b", Line: 5, Col: 2>
+<ERROR, "c", Line: 5, Col: 3>
+<ERROR, "t", Line: 6, Col: 1>
+<ERROR, "e", Line: 6, Col: 2>
+<ERROR, "s", Line: 6, Col: 3>
+<ERROR, "t", Line: 6, Col: 4>
+<ERROR, "_", Line: 6, Col: 5>
+<ERROR, "v", Line: 6, Col: 6>
+<ERROR, "a", Line: 6, Col: 7>
+<ERROR, "r", Line: 6, Col: 8>
+<ERROR, "m", Line: 7, Col: 1>
+<ERROR, "y", Line: 7, Col: 2>
+<IDENTIFIER, "Variable", Line: 7, Col: 3>
+<COMMENT, "## Invalid characters", Line: 9, Col: 1>
+<ERROR, "@", Line: 10, Col: 1>
+<ERROR, "s", Line: 10, Col: 2>
+<ERROR, "y", Line: 10, Col: 3>
+<ERROR, "m", Line: 10, Col: 4>
+<ERROR, "b", Line: 10, Col: 5>
+<ERROR, "o", Line: 10, Col: 6>
+<ERROR, "l", Line: 10, Col: 7>
+<ERROR, "$", Line: 11, Col: 1>
+<ERROR, "d", Line: 11, Col: 2>
+<ERROR, "o", Line: 11, Col: 3>
+<ERROR, "l", Line: 11, Col: 4>
+<ERROR, "l", Line: 11, Col: 5>
+<ERROR, "a", Line: 11, Col: 6>
+<ERROR, "r", Line: 11, Col: 7>
+<ERROR, "&", Line: 12, Col: 1>
+<ERROR, "a", Line: 12, Col: 2>
+<ERROR, "m", Line: 12, Col: 3>
+<ERROR, "p", Line: 12, Col: 4>
+<ERROR, "e", Line: 12, Col: 5>
+<ERROR, "r", Line: 12, Col: 6>
+<ERROR, "s", Line: 12, Col: 7>
+<ERROR, "a", Line: 12, Col: 8>
+<ERROR, "n", Line: 12, Col: 9>
+<ERROR, "d", Line: 12, Col: 10>
+<COMMENT, "## Malformed floats", Line: 14, Col: 1>
+<INTEGER, "123.", Line: 15, Col: 1>
+<ERROR, ".", Line: 15, Col: 5>
+<ERROR, ".", Line: 16, Col: 1>
+<INTEGER, "456", Line: 16, Col: 2>
+<INTEGER, "12.", Line: 17, Col: 1>
+<ERROR, ".", Line: 17, Col: 4>
+<ERROR, ".", Line: 17, Col: 5>
+<INTEGER, "34", Line: 17, Col: 6>
+<FLOAT, "1.2", Line: 18, Col: 1>
+<ERROR, ".", Line: 18, Col: 4>
+<INTEGER, "3", Line: 18, Col: 5>
+<FLOAT, "1.2e", Line: 19, Col: 1>
+<ERROR, "e", Line: 19, Col: 5>
+<FLOAT, "1.2e+", Line: 20, Col: 1>
+<ERROR, "e", Line: 20, Col: 6>
+<OPERATOR, "+", Line: 20, Col: 7>
+<COMMENT, "## Incomplete tokens (these are INVALID - not recognized by the language)", Line: 22, Col: 1>
+<COMMENT, "## Note: = and ! are only valid as part of ==, !=, <=, or >=", Line: 23, Col: 1>
+<ERROR, "=", Line: 24, Col: 1>
+<ERROR, "!", Line: 25, Col: 1>
+<ERROR, "#", Line: 26, Col: 1>
+<COMMENT, "###", Line: 27, Col: 1>
+<COMMENT, "## Invalid identifier (too long - over 31 chars)", Line: 29, Col: 1>
+<IDENTIFIER, "This_is_a_very_long_identifier_", Line: 30, Col: 1>
+<ERROR, "n", Line: 30, Col: 32>
+<ERROR, "a", Line: 30, Col: 33>
+<ERROR, "m", Line: 30, Col: 34>
+<ERROR, "e", Line: 30, Col: 35>
+<ERROR, "_", Line: 30, Col: 36>
+<ERROR, "e", Line: 30, Col: 37>
+<ERROR, "x", Line: 30, Col: 38>
+<ERROR, "c", Line: 30, Col: 39>
+<ERROR, "e", Line: 30, Col: 40>
+<ERROR, "e", Line: 30, Col: 41>
+<ERROR, "d", Line: 30, Col: 42>
+<ERROR, "i", Line: 30, Col: 43>
+<ERROR, "n", Line: 30, Col: 44>
+<ERROR, "g", Line: 30, Col: 45>
+<ERROR, "_", Line: 30, Col: 46>
+<ERROR, "m", Line: 30, Col: 47>
+<ERROR, "a", Line: 30, Col: 48>
+<ERROR, "x", Line: 30, Col: 49>
+<ERROR, "i", Line: 30, Col: 50>
+<ERROR, "m", Line: 30, Col: 51>
+<ERROR, "u", Line: 30, Col: 52>
+<ERROR, "m", Line: 30, Col: 53>
+<ERROR, "_", Line: 30, Col: 54>
+<ERROR, "l", Line: 30, Col: 55>
+<ERROR, "e", Line: 30, Col: 56>
+<ERROR, "n", Line: 30, Col: 57>
+<ERROR, "g", Line: 30, Col: 58>
+<ERROR, "t", Line: 30, Col: 59>
+<ERROR, "h", Line: 30, Col: 60>
+<COMMENT, "## Float with too many decimal places (over 6)", Line: 32, Col: 1>
+<FLOAT, "123.1234567", Line: 33, Col: 1>
+<COMMENT, "## Invalid number formats", Line: 35, Col: 1>
+<OPERATOR, "+", Line: 36, Col: 1>
+<INTEGER, "+123", Line: 36, Col: 2>
+<OPERATOR, "-", Line: 37, Col: 1>
+<INTEGER, "-456", Line: 37, Col: 2>
+<OPERATOR, "+", Line: 38, Col: 1>
+<INTEGER, "-789", Line: 38, Col: 2>
+<COMMENT, "## Mixed valid and invalid", Line: 40, Col: 1>
+<IDENTIFIER, "Variable_1", Line: 41, Col: 1>
+<ERROR, "@", Line: 41, Col: 12>
+<ERROR, "e", Line: 41, Col: 13>
+<ERROR, "r", Line: 41, Col: 14>
+<ERROR, "r", Line: 41, Col: 15>
+<ERROR, "o", Line: 41, Col: 16>
+<ERROR, "r", Line: 41, Col: 17>
+<IDENTIFIER, "Counter_2", Line: 41, Col: 19>
+<INTEGER, "+123", Line: 42, Col: 1>
+<ERROR, "$", Line: 42, Col: 6>
+<ERROR, "i", Line: 42, Col: 7>
+<ERROR, "n", Line: 42, Col: 8>
+<ERROR, "v", Line: 42, Col: 9>
+<ERROR, "a", Line: 42, Col: 10>
+<ERROR, "l", Line: 42, Col: 11>
+<ERROR, "i", Line: 42, Col: 12>
+<ERROR, "d", Line: 42, Col: 13>
+<INTEGER, "-456", Line: 42, Col: 15>
+============================
+
+
+========== STATISTICS ==========
+Total tokens: 124
+Lines processed: 43
+Comments removed: 12
+
+Token counts by type:
+  COMMENT: 12
+  FLOAT: 4
+  ERROR: 90
+  IDENTIFIER: 4
+  OPERATOR: 4
+  INTEGER: 10
+================================
+
+
+========== SYMBOL TABLE ==========
+Name                 Type            First Line   Frequency
+============================================================
+  Variable             IDENTIFIER      Line: 7     Freq: 1
+  This_is_a_very_long_identifier_ IDENTIFIER      Line: 30    Freq: 1
+  Variable_1           IDENTIFIER      Line: 41    Freq: 1
+  Counter_2            IDENTIFIER      Line: 41    Freq: 1
+============================================================
+Total unique identifiers: 4
+
+
+========== ERROR SUMMARY ==========
+  Total errors: 90
+
+  Errors by type:
+    INVALID_CHARACTER: 90
+
+  First 10 errors (if any):
+    1. ERROR [INVALID_CHARACTER] at Line 5, Col 1: 'a' - Character 'a' is not recognized in this language
+    2. ERROR [INVALID_CHARACTER] at Line 5, Col 2: 'b' - Character 'b' is not recognized in this language
+    3. ERROR [INVALID_CHARACTER] at Line 5, Col 3: 'c' - Character 'c' is not recognized in this language
+    4. ERROR [INVALID_CHARACTER] at Line 6, Col 1: 't' - Character 't' is not recognized in this language
+    5. ERROR [INVALID_CHARACTER] at Line 6, Col 2: 'e' - Character 'e' is not recognized in this language
+    6. ERROR [INVALID_CHARACTER] at Line 6, Col 3: 's' - Character 's' is not recognized in this language
+    7. ERROR [INVALID_CHARACTER] at Line 6, Col 4: 't' - Character 't' is not recognized in this language
+    8. ERROR [INVALID_CHARACTER] at Line 6, Col 5: '_' - Character '_' is not recognized in this language
+    9. ERROR [INVALID_CHARACTER] at Line 6, Col 6: 'v' - Character 'v' is not recognized in this language
+    10. ERROR [INVALID_CHARACTER] at Line 6, Col 7: 'a' - Character 'a' is not recognized in this language
+    ... and 80 more
+===================================
+
