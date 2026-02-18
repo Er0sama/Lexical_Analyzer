@@ -1,0 +1,24 @@
+## Test file 2: Complex expressions
+## Testing real-world code patterns
+
+Counter_value +123
+Result -456
+Float_num 12.34e-5
+
+Sum + Difference - Product * Quotient / Remainder %
+
+Value_1 < Value_2
+Value_1 <= Value_2
+Value_3 > Value_4
+Value_3 >= Value_4
+Flag_1 == Flag_2
+Flag_1 != Flag_2
+
+##Complex expression with all operators
+Result +123 - 45 * 67 / 89 % 10
+Comparison Value_1 < Value_2 true false
+
+## Nested expressions
+A + B * C - D / E
+X true Y false
+P <= Q R >= S

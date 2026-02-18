@@ -1,0 +1,46 @@
+## Test file 3: Edge cases and boundary conditions
+
+## Single character identifier (minimum length)
+A
+Z
+
+## Maximum length identifier (31 characters)
+Variable_name_with_max_length_31
+
+## Integer edge cases
++0
+-0
+0
+
+## Float edge cases
+1.0
+1.000001
+999999.999999
++1.1e+999
+-1.1e-999
+
+## Float with 6 decimal places (maximum)
+123.123456
+
+## Boolean keywords
+true
+false
+
+## All relational operators in sequence
+< <= > >= == !=
+
+## All arithmetic operators
++ - * / %
+
+## Multiple comments
+##First comment
+##Second comment
+##Third comment with special chars: +-*/<>=!@#$
+
+## Operators next to each other
++ - * / %
+< > == !=
+
+## Mixed tokens on same line
+Variable_1 +123 -456 12.34
+A true B false C < D

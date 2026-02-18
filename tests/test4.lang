@@ -1,0 +1,42 @@
+## Test file 4: Lexical errors
+## Testing error detection and recovery
+
+## Invalid identifiers (lowercase start)
+abc
+test_var
+myVariable
+
+## Invalid characters
+@symbol
+$dollar
+&ampersand
+
+## Malformed floats
+123.
+.456
+12..34
+1.2.3
+1.2e
+1.2e+
+
+## Incomplete tokens (these are INVALID - not recognized by the language)
+## Note: = and ! are only valid as part of ==, !=, <=, or >=
+=
+!
+#
+###
+
+## Invalid identifier (too long - over 31 chars)
+This_is_a_very_long_identifier_name_exceeding_maximum_length
+
+## Float with too many decimal places (over 6)
+123.1234567
+
+## Invalid number formats
+++123
+--456
++-789
+
+## Mixed valid and invalid
+Variable_1 @error Counter_2
++123 $invalid -456

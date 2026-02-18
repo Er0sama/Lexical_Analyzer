@@ -1,0 +1,28 @@
+## Test file 1: All valid tokens
+## Testing basic token recognition
+
+Variable_name  ## Identifier test
+Counter_123
+A
+Test_var_2024
+
++100  ## Integer tests
+-42
+0
+999
+
++123.456  ## Float tests
+-0.123456
+12.34e10
+1.0E-5
+999.999999
+
+##This is a single-line comment
+## Another comment with symbols: +*/%<>=!
+
+true  ## Boolean tests
+false
+
+< > <= >= == !=  ## Relational operators
+
++ - * / %  ## Arithmetic operators

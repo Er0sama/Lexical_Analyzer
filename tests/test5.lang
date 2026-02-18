@@ -1,0 +1,50 @@
+## Test file 5: Comments and real program structure
+## Simulating a simple program in our custom language
+
+##Program: Calculate factorial
+##Author: Student
+##Date: February 18, 2026
+
+## Variable declarations
+Num 5
+Result 1
+Counter 1
+
+##Main computation loop
+Counter <= Num
+Result Result * Counter
+Counter Counter + 1
+
+##Check conditions
+Counter > Num true
+Result == 120 false
+
+##Floating point operations
+Pi 3.14159
+E 2.71828
+Exp_val 1.23e-4
+
+##Boolean flags
+Is_done false
+Has_error false
+
+##Relational comparisons
+Counter < Num
+Counter <= Num  
+Counter > Num
+Counter >= Num
+Counter == Num
+Counter != Num
+
+##Arithmetic operations
+Sum A + B
+Difference A - B
+Product A * B
+Quotient A / B
+Remainder A % B
+
+##End of program
+Final_value +12345
+Status_code 0
+
+##This is the last comment
